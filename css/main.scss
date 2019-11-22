@@ -1,0 +1,48 @@
+@import "_varibles.scss";
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    font-weight: 600;
+    color: #fff;
+}
+.body{
+    background: $background;
+}
+.container{
+    max-width: 60%;
+    margin: 0 auto;
+    height: 52.5vw;
+    border: 1px solid #fff;
+    padding: .05rem 0;
+}
+.dash-board{
+    width: 90%;
+    height: 13vw;
+    @include flex(row, space-between, flex-start);
+    margin: 1rem auto;
+    border: 2px solid $headerOutline;
+    border-radius: 15px;
+    padding: 1rem;
+    
+    .dash-board__player-list{
+        width: 30%;
+        height: 100%;
+        @include flex(column, flex-start, flex-start);
+        border: 1px solid #000;
+        overflow: hidden;
+        padding: 1rem;
+    }
+    .dash-board__score{
+        width: 25%;
+        height: 100%;
+        @include flex(column, space-between, center);
+        border: 1px solid #000;
+        padding: 1rem;
+        overflow: hidden;
+        background : #fff;
+        border-radius: 10px;
+    }
+}

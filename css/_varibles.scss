@@ -1,0 +1,16 @@
+@font-face{
+    font-family: rpsFont Condensed;
+    src: url(https://fonts.google.com/specimen/Barlow+Semi+Condensed);
+}
+
+$background : hsl(214, 47%, 23%);
+$darkText : hsl(229, 25%, 31%);
+$scoreText : hsl(229, 64%, 46%);
+$headerOutline : hsl(217, 16%, 45%);
+
+@mixin flex($direction, $justify, $align){
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $justify;
+    align-items: $align;
+}
