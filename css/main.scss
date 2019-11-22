@@ -1,4 +1,5 @@
 @import "_varibles.scss";
+@import "_rules.scss";
 
 *{
     margin: 0;
@@ -44,14 +45,14 @@
     .dash-board__score{
         width: 25%;
         height: 100%;
-        @include flex(column, space-around, center);
+        @include flex(column, center, center);
         padding: 1rem;
         overflow: hidden;
         background : #fff;
         border-radius: 10px;
         .score-text{
             color: $scoreText;
-            font-size: 1.5rem;
+            margin-bottom: .5rem;
         }
         .players-score{
             color: $scoreText;
@@ -102,10 +103,30 @@
 }
 .player-circle{
     width:30%;
-    height: 95%;
+    height: 90%;
     border-radius: 50%;
     background-color: #fff;
     background-repeat: no-repeat;
     background-position: center center;
     background-size: 50% 70%;
+    transition: all .3s;
+    &:hover{
+        transform: scale(1.1);
+    }
 }
+.rules{
+    cursor: pointer;
+    position: fixed;
+    right:3rem;
+    padding: .3rem 2.5rem;
+    font-size: 1.5rem;
+    background: transparent;
+    border:1px solid $headerOutline;
+    border-radius: 10px;
+    outline: none;
+    transition: all .5s;
+    &:hover{
+        transform: scale(1.1);
+    }
+}
+
