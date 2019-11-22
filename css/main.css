@@ -19,7 +19,6 @@
   max-width: 60%;
   margin: 0 auto;
   height: 52.5vw;
-  border: 1px solid #fff;
   padding: .05rem 0;
   overflow: hidden;
 }
@@ -87,7 +86,6 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  border: 1px solid #000;
   padding: 1rem;
   overflow: hidden;
   background: #fff;
@@ -105,7 +103,6 @@
 }
 
 .battle-ground {
-  border: 1px solid #fff;
   width: 80%;
   height: 30vw;
   display: -webkit-box;
@@ -121,6 +118,10 @@
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
+  background-image: url(/img/bg-triangle.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 50% 70%;
   padding: .5rem;
   margin: 2rem auto;
   overflow: hidden;
@@ -129,14 +130,66 @@
 .battle-ground .battle-ground__two-circles {
   width: 100%;
   height: 48%;
-  border: 1px solid black;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   overflow: hidden;
+}
+
+.battle-ground .battle-ground__two-circles .paper-circle {
+  background-image: url(/img/icon-paper.svg);
+  border: 1rem solid #4c69f1;
+}
+
+.battle-ground .battle-ground__two-circles .scissors-circle {
+  background-image: url(/img/icon-scissors.svg);
+  border: 1rem solid #f39f1b;
 }
 
 .battle-ground .battle-ground__one-circle {
   width: 100%;
   height: 48%;
-  border: 1px solid black;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   overflow: hidden;
+}
+
+.battle-ground .battle-ground__one-circle .rock-circle {
+  background: url(/img/icon-rock.svg);
+  border: 1rem solid #dc3c58;
+  background-color: #fff;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 50% 70%;
+}
+
+.player-circle {
+  width: 30%;
+  height: 95%;
+  border-radius: 50%;
+  background-color: #fff;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 50% 70%;
 }
 /*# sourceMappingURL=main.css.map */
