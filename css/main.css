@@ -80,6 +80,26 @@
   background-size: contain;
 }
 
+.rules {
+  cursor: pointer;
+  position: fixed;
+  right: 3rem;
+  bottom: 5rem;
+  padding: .3rem 2.5rem;
+  font-size: 1.5rem;
+  background: transparent;
+  border: 1px solid #606e85;
+  border-radius: 10px;
+  outline: none;
+  -webkit-transition: all .5s;
+  transition: all .5s;
+}
+
+.rules:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
 .block-on-off {
   display: -webkit-box !important;
   display: -ms-flexbox !important;
@@ -136,11 +156,12 @@
 }
 
 .referee .result {
-  font-size: 2rem;
+  font-size: 1.5rem;
 }
 
 .referee .play-again {
   background: #fff;
+  font-size: .75rem;
   border-radius: 15px;
   color: #000;
   padding: .3rem 1.5rem;
@@ -240,6 +261,8 @@
   background-repeat: no-repeat;
   background-position: center center;
   background-size: 50% 70%;
+  -webkit-box-shadow: inset -33px 29px 151px -120px black;
+          box-shadow: inset -33px 29px 151px -120px black;
   -webkit-transition: all .3s;
   transition: all .3s;
 }
@@ -288,7 +311,7 @@
 .container {
   max-width: 60%;
   margin: 0 auto;
-  height: 52.5vw;
+  height: 100vh;
   padding: .05rem 0;
   overflow: hidden;
 }
@@ -373,22 +396,80 @@
   font-size: 2.5rem;
 }
 
-.rules {
-  cursor: pointer;
-  position: fixed;
-  right: 3rem;
-  padding: .3rem 2.5rem;
-  font-size: 1.5rem;
-  background: transparent;
-  border: 1px solid #606e85;
-  border-radius: 10px;
-  outline: none;
-  -webkit-transition: all .5s;
-  transition: all .5s;
+@media screen and (max-width: 768px) {
+  .container {
+    max-width: 100% !important;
+  }
+  .dash-board {
+    height: 25vw;
+  }
+  .battle-ground {
+    height: 50vw !important;
+  }
+  .fight-ground {
+    height: 50vw !important;
+  }
+  .rules-block {
+    width: 50% !important;
+    height: 50vw !important;
+  }
+  .rules-block__body {
+    height: 40vw !important;
+  }
 }
 
-.rules:hover {
-  -webkit-transform: scale(1.1);
-          transform: scale(1.1);
+@media screen and (max-width: 425px) {
+  .score-text {
+    font-size: .5rem !important;
+  }
+  .battle-ground {
+    width: 100% !important;
+    height: 70vw !important;
+  }
+  .players-score {
+    font-size: 1rem !important;
+  }
+  .rules {
+    right: 50%;
+    -webkit-transform: translate(50%);
+            transform: translate(50%);
+  }
+  .rules:hover {
+    -webkit-transform: scale(1) !important;
+            transform: scale(1) !important;
+  }
+  .block-on-off {
+    display: block !important;
+  }
+  .rules-block {
+    width: 70% !important;
+    height: 70vw !important;
+  }
+  .rules-block__body {
+    height: 60vw !important;
+  }
+  .result {
+    font-size: 1rem !important;
+  }
+  .play-again {
+    font-size: .6rem !important;
+    padding: .2rem 1rem !important;
+  }
+}
+
+@media screen and (max-width: 342px) {
+  .battle-ground {
+    height: 80vw !important;
+  }
+  .fight-ground {
+    height: 50vw !important;
+  }
+  .result {
+    font-size: .7rem !important;
+  }
+  .play-again {
+    font-size: .5rem !important;
+    padding: .2rem 1rem !important;
+  }
 }
 /*# sourceMappingURL=main.css.map */

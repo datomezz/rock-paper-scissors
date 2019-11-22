@@ -30,11 +30,11 @@ function comparison(){
     } else if (first_player.className === player[0] && second_player.className === player[0]){
         result.innerHTML = "Tie";
     } else if (first_player.className === player[1] && second_player.className === player[0]){
-        result.innerHTML = "You Win";
-        players_score.innerHTML = ++score;
-    } else if (first_player.className === player[1] && second_player.className === player[2]){
         result.innerHTML = "You Lose";
         players_score.innerHTML = --score;
+    } else if (first_player.className === player[1] && second_player.className === player[2]){
+        result.innerHTML = "You Win";
+        players_score.innerHTML = ++score;
     } else if (first_player.className === player[1] && second_player.className === player[1]){
         result.innerHTML = "Tie";
     }  else if (first_player.className === player[2] && second_player.className === player[0]){
@@ -51,12 +51,12 @@ function comparison(){
 function battle(){
     let rand = Math.round(Math.random() * 2);
     second_player.className = player[rand];
-
 }
 
 function createFightGround(){
     battle_ground.style.display = "none";
     fight_ground.style.display = "flex";
+
 }
 function createBattleGround(){
     battle_ground.style.display = "flex";

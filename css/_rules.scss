@@ -46,6 +46,22 @@
         background-size: contain;
     }
 }
+.rules{
+    cursor: pointer;
+    position: fixed;
+    right:3rem;
+    bottom: 5rem;
+    padding: .3rem 2.5rem;
+    font-size: 1.5rem;
+    background: transparent;
+    border:1px solid $headerOutline;
+    border-radius: 10px;
+    outline: none;
+    transition: all .5s;
+    &:hover{
+        transform: scale(1.1);
+    }
+}
 .block-on-off{
     display: flex !important;
     flex-direction: column;

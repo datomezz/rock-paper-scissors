@@ -1,6 +1,7 @@
 @import "_varibles.scss";
 @import "_rules.scss";
 @import "_battle-ground.scss";
+@import "_responsive.scss";
 *{
     margin: 0;
     padding: 0;
@@ -17,7 +18,7 @@
 .container{
     max-width: 60%;
     margin: 0 auto;
-    height: 52.5vw;
+    height: 100vh;
     padding: .05rem 0;
     overflow: hidden;
 }
@@ -61,19 +62,75 @@
     }
 }
 
-.rules{
-    cursor: pointer;
-    position: fixed;
-    right:3rem;
-    padding: .3rem 2.5rem;
-    font-size: 1.5rem;
-    background: transparent;
-    border:1px solid $headerOutline;
-    border-radius: 10px;
-    outline: none;
-    transition: all .5s;
-    &:hover{
-        transform: scale(1.1);
+@media screen and (max-width: 768px){
+    .container{
+        max-width: 100% !important;
+    }
+    .dash-board{
+        height: 25vw;
+    }
+    .battle-ground{
+        height: 50vw !important;
+    }
+    .fight-ground{
+        height: 50vw !important;
+    }
+    .rules-block{
+        width: 50% !important;
+        height: 50vw !important;
+    }
+    .rules-block__body{
+        height: 40vw !important;
     }
 }
-
+@media screen and (max-width: 425px){
+    .score-text{
+        font-size: .5rem !important;
+    }
+    .battle-ground{
+        width: 100% !important;
+        height: 70vw !important;
+    }
+    .players-score{
+        font-size: 1rem !important;
+    }
+    .rules{
+        right: 50%;
+        transform: translate(50%);
+        &:hover{
+            transform: scale(1) !important;
+        }
+    }
+    .block-on-off{
+        display: block !important;
+    }
+    .rules-block{
+        width: 70% !important;
+        height: 70vw !important;
+    }
+    .rules-block__body{
+        height: 60vw !important;
+    }
+    .result{
+        font-size: 1rem !important;
+    }
+    .play-again{
+        font-size: .6rem !important;
+        padding: .2rem 1rem !important;
+    }
+}
+@media screen and (max-width: 342px){
+    .battle-ground{
+        height: 80vw !important;
+    }
+    .fight-ground{
+        height: 50vw !important;
+    }
+    .result{
+        font-size: .7rem !important;
+    }
+    .play-again{
+        font-size: .5rem !important;
+        padding: .2rem 1rem !important;
+    }
+}
