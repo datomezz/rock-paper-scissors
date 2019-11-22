@@ -100,6 +100,174 @@
   background: rgba(0, 0, 0, 0.7) !important;
 }
 
+.fight-ground {
+  display: none;
+  width: 100%;
+  height: 25vw;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 1rem;
+  margin: 2rem auto;
+  overflow: hidden;
+}
+
+.referee {
+  width: 25%;
+  height: 25%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.referee .result {
+  font-size: 2rem;
+}
+
+.referee .play-again {
+  background: #fff;
+  border-radius: 15px;
+  color: #000;
+  padding: .3rem 1.5rem;
+  -webkit-transition: .3s ease;
+  transition: .3s ease;
+}
+
+.referee .play-again:hover {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+}
+
+.fighter-circle {
+  width: 25%;
+  height: 60%;
+  border-radius: 50%;
+  background-color: #fff;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 50% 70%;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+}
+
+.fighter-circle:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+.battle-ground {
+  width: 80%;
+  height: 30vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  background-image: url(/img/bg-triangle.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 50% 70%;
+  padding: .5rem;
+  margin: 2rem auto;
+  overflow: hidden;
+}
+
+.battle-ground .battle-ground__two-circles {
+  width: 100%;
+  height: 48%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  overflow: hidden;
+}
+
+.battle-ground .battle-ground__one-circle {
+  width: 100%;
+  height: 48%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  overflow: hidden;
+}
+
+.player-circle {
+  width: 30%;
+  height: 90%;
+  border-radius: 50%;
+  background-color: #fff;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 50% 70%;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+}
+
+.player-circle:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+.paper-circle {
+  background-image: url(/img/icon-paper.svg);
+  border: 1rem solid #4c69f1;
+}
+
+.scissors-circle {
+  background-image: url(/img/icon-scissors.svg);
+  border: 1rem solid #f39f1b;
+}
+
+.rock-circle {
+  background: url(/img/icon-rock.svg);
+  border: 1rem solid #dc3c58;
+  background-color: #fff;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 50% 70%;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -203,104 +371,6 @@
 .dash-board .dash-board__score .players-score {
   color: #2a46c0;
   font-size: 2.5rem;
-}
-
-.battle-ground {
-  width: 80%;
-  height: 30vw;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
-  background-image: url(/img/bg-triangle.svg);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: 50% 70%;
-  padding: .5rem;
-  margin: 2rem auto;
-  overflow: hidden;
-}
-
-.battle-ground .battle-ground__two-circles {
-  width: 100%;
-  height: 48%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  overflow: hidden;
-}
-
-.battle-ground .battle-ground__two-circles .paper-circle {
-  background-image: url(/img/icon-paper.svg);
-  border: 1rem solid #4c69f1;
-}
-
-.battle-ground .battle-ground__two-circles .scissors-circle {
-  background-image: url(/img/icon-scissors.svg);
-  border: 1rem solid #f39f1b;
-}
-
-.battle-ground .battle-ground__one-circle {
-  width: 100%;
-  height: 48%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  overflow: hidden;
-}
-
-.battle-ground .battle-ground__one-circle .rock-circle {
-  background: url(/img/icon-rock.svg);
-  border: 1rem solid #dc3c58;
-  background-color: #fff;
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: 50% 70%;
-}
-
-.player-circle {
-  width: 30%;
-  height: 90%;
-  border-radius: 50%;
-  background-color: #fff;
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: 50% 70%;
-  -webkit-transition: all .3s;
-  transition: all .3s;
-}
-
-.player-circle:hover {
-  -webkit-transform: scale(1.1);
-          transform: scale(1.1);
 }
 
 .rules {

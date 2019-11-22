@@ -1,6 +1,6 @@
 @import "_varibles.scss";
 @import "_rules.scss";
-
+@import "_battle-ground.scss";
 *{
     margin: 0;
     padding: 0;
@@ -60,60 +60,7 @@
         }
     }
 }
-.battle-ground{
-    width: 80%;
-    height: 30vw;
-    @include flex(column, space-between, flex-start);
-    background-image: url(/img/bg-triangle.svg);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: 50% 70%;
-    padding: .5rem;
-    margin: 2rem auto;
-    overflow: hidden;
 
-    .battle-ground__two-circles{
-        width: 100%;
-        height: 48%;
-        @include flex(row, space-around, center);
-        overflow: hidden;
-        .paper-circle{
-            background-image: url(/img/icon-paper.svg);
-            border: 1rem solid #4c69f1;
-        }
-        .scissors-circle{
-            background-image: url(/img/icon-scissors.svg);
-            border: 1rem solid #f39f1b;
-        }
-    }
-    .battle-ground__one-circle{
-        width: 100%;
-        height: 48%;
-        @include flex(row, center, center);
-        overflow: hidden;
-        .rock-circle{
-            background: url(/img/icon-rock.svg);
-            border: 1rem solid #dc3c58;
-            background-color: #fff;
-            background-repeat: no-repeat;
-            background-position: center center;
-            background-size: 50% 70%;
-        }
-    }
-}
-.player-circle{
-    width:30%;
-    height: 90%;
-    border-radius: 50%;
-    background-color: #fff;
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: 50% 70%;
-    transition: all .3s;
-    &:hover{
-        transform: scale(1.1);
-    }
-}
 .rules{
     cursor: pointer;
     position: fixed;
