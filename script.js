@@ -14,6 +14,11 @@ let result = document.querySelector(".result");
 let first_player = document.querySelector("#first_player");
 let second_player = document.querySelector("#second_player");
 
+let audio_click = new Audio();
+let audio_play = new Audio();
+audio_click.src = "/audio/bubles.mp3";
+audio_play.src = "/audio/play-again.mp3";
+
 let score = 0;
 let players_score = document.querySelector(".players-score");
 players_score.innerHTML = score;
@@ -78,23 +83,28 @@ window.onload = function () {
     play_again.addEventListener("click", function(){
         createBattleGround();
         first_player.className = "fighter-circle";
+        audio_play.play();
     });
     paper.addEventListener("click", function(){
         createFightGround();
         first_player.classList.add("paper-circle");
         battle();
         comparison();
+        audio_click.play();
     });
     rock.addEventListener("click", function(){
         createFightGround();
         first_player.classList.add("rock-circle");
         battle();
         comparison();
+        audio_click.play();
     });
     scissors.addEventListener("click", function(){
         createFightGround();
         first_player.classList.add("scissors-circle");
         battle();
         comparison();
+        audio_click.play();
     });
 }
+
