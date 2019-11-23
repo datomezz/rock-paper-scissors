@@ -84,7 +84,7 @@
   cursor: pointer;
   position: fixed;
   right: 3rem;
-  bottom: 1.5rem;
+  bottom: 5rem;
   padding: .3rem 2.5rem;
   font-size: 1.5rem;
   background: transparent;
@@ -460,7 +460,7 @@
     -webkit-box-direction: normal !important;
         -ms-flex-direction: column !important;
             flex-direction: column !important;
-    height: 75vw !important;
+    height: 76vw !important;
   }
   .referee {
     margin: 1rem 0 !important;
