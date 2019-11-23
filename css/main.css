@@ -455,14 +455,21 @@
     font-size: .6rem !important;
     padding: .2rem 1rem !important;
   }
+  .fight-ground {
+    -webkit-box-orient: vertical !important;
+    -webkit-box-direction: normal !important;
+        -ms-flex-direction: column !important;
+            flex-direction: column !important;
+    height: 75vw !important;
+  }
+  .referee {
+    margin: 1rem 0 !important;
+  }
 }
 
 @media screen and (max-width: 342px) {
   .battle-ground {
     height: 80vw !important;
-  }
-  .fight-ground {
-    height: 50vw !important;
   }
   .result {
     font-size: .7rem !important;
