@@ -16,8 +16,8 @@ let second_player = document.querySelector("#second_player");
 
 let audio_click = new Audio();
 let audio_play = new Audio();
-audio_click.src = "/audio/bubles.mp3";
-audio_play.src = "/audio/play-again.mp3";
+audio_click.src = "audio/bubles.mp3";
+audio_play.src = "audio/play-again.mp3";
 
 let score = 0;
 let players_score = document.querySelector(".players-score");
